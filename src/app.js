@@ -1,37 +1,34 @@
-const principioDeLaExcusa = [
-  "No podre ir",
-  "Mi hermano",
-  "Lo siento pero",
-  "No estare"
-];
 
-const enlaceDeLaExcusa = [
-  "por que ",
-  "tuvo un accidente",
-  "esta vez cancelare la reunion",
-  "presente ese dia"
-];
-const motivoDeLaExcusa = [
-  "tengo una cita medica.",
-  "y lo tengo que acompañar.",
-  "por motivos personales.",
-  "por que tengo otro compromiso."
-];
 
 function generarExcusa() {
-  const principio =
-    principioDeLaExcusa[Math.floor(Math.random() * principioDeLaExcusa.length)];
-  const enlace =
-    enlaceDeLaExcusa[Math.floor(Math.random() * enlaceDeLaExcusa.length)];
-  const motivo =
-    motivoDeLaExcusa[Math.floor(Math.random() * motivoDeLaExcusa.length)];
-
-  return `${principio} ${enlace} ${motivo} `;
+  const who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
+  let rnd = Math.random();
+  const posicionDelWhoRandom = Math.floor(rnd*(tiposDeWho.length));
+  return tiposDeWho[posicionDelWhoRandom];
 }
+function generarExcusa() {
+  const action = ['ate', 'peed', 'crushed', 'broke'];
+  let rnd = Math.random();
+  const posicionDelActionRandom = Math.floor(rnd*(tiposDeAction.length));
+  return tiposDeAction[posicionDelActionRandom];
+}
+function generarExcusa() {
+  const what = ['my homework', 'my phone', 'the car'];
+  let rnd = Math.random();
+  const posicionDelWhatRandom = Math.floor(rnd*(tiposDeWhat.length));
+  return tiposDeWhat[posicionDelWhatRandom];
+}
+function generarExcusa() {
+  const when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+  let rnd = Math.random();
+  const posicionDelWhenRandom = Math.floor(rnd*(tiposDewhen.length));
+  return tiposDewhen[posicionDelWhenRandom];
+}
+
 
 window.addEventListener("load", () => {
   const excusa = generarExcusa();
 
   document.body.innerHTML = `<h1>${excusa}</h1>`;
 });
-//lo hice con un poco de ayuda, tarde pero termine
+//me quede por aqui si me pudieran echar una mano con lo que sigue por que me estanque aqui
